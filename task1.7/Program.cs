@@ -16,12 +16,13 @@ void PrintArray(double[,] array)
 }
 
 void FillArray(double[,] array)
-{
-   for (int i = 0; i < array.GetLength(0); i++)
-    for (int j = 0; j < array.GetLength(1); j++)
-         array[i, j] = Convert.ToDouble(rnd.Next(-100, 100)/10.0); 
-}
 
+{ for (int i = 0; i < rows; i++)
+ { for (int j = 0; j < cols; j++)
+  array[i,j] = Convert.ToDouble(rnd.Next(-100, 100)/10.0);
+ }
+}
+   
 FillArray(array);
 Console.WriteLine();
 PrintArray(array);
